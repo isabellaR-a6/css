@@ -1,0 +1,43 @@
+body{
+    margin: 0;    /*Remova a margem do navegador */
+}
+
+ul{
+    list-style: none;  /*Muda o estilo da lista(aquelas bolinhas que ficam na lista não ordenada) */
+    padding: 0;      /*Remve o espaço interno da listinha*/
+}
+
+nav{
+    background-color: #161616;
+    padding: 0 20px; /*o primeiro número é um canto e quanto mais números você coloca é o esquerda direita/ emcima/ em baixo e assim por diante no exemplo acima é o interno da esquerda e da direita*/
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1, p{                                                    /*Define a cor do texto e se colocar a vírgula ele serve para mais itens*/
+    color: antiquewhite;
+}
+
+nav, ul{
+    display: flex;                       /* Para mexer os itens */
+    flex-direction: row;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+li{
+    padding: 0 20px;
+   
+}
+
+li:hover, h1:hover{               /*Colocar o mouse encima ele faz un negocio*/
+    cursor: pointer;              /*esse aparece uma maozinha quando você passa o cursor*/
+    opacity: 0.8;                    /* quando passa o cursor ele fica mais escuro*/
+    background-color: rgb(45, 45, 45);    /*Quando passa o cursor encima ele faz tipo um quadrado de outra cor*/                
+    font-size: 30px;                    /*Quando passa o cursor o tamanho da fonte muda*/
+     transition: all 0.5s;                          /*Faz com q a parte do background tenha uma leve transiçaõ de cor de um topico para outro */
+   
+}
+
+
+
+

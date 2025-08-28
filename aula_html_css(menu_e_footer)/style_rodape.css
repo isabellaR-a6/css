@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer{
+    background-color: #7a119d;
+    color: antiquewhite;
+    padding: 30px 20px;
+}
+
+.footer-container{
+    display: flex;  /*Mexer livremente*/
+                                            
+    justify-content: space-between;     /*Espaço entre eles*/
+    flex-wrap: wrap;            /*Quebrar linha quando acabar os espaços */
+    gap:20px;                     /*Espaço entre os itens*/
+    max-width: 1020px;           /*não entendi oq mudou */  
+    margin: auto;                 /*Margem*/
+}  
+
+.footer_logo h2{
+    margin: 0;                        /*Para onde sobe a palavra*/
+    color: rgb(221, 185, 255);
+}
+
+.footer_contato h3, .footer_social h3{
+    margin-bottom: 10px ;              /*Da espaço embaixo dos subtitulos */
+    color: rgb(221, 185, 255);
+}
+
+.social-icons a{                                        /* se comporta como texto*/
+    color: rgb(250, 108, 255);               
+    margin-right: 15px;
+    font-size: 20px;
+    transition: 0.7s;
+} 
+
+.social-icons a:hover{
+    color: rgb(231, 219, 243);
+}
+
+.footer_social{
+    color: rgb(227, 48, 255);
+}
