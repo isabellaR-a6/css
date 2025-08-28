@@ -1,0 +1,126 @@
+.Container{
+     display: grid;  
+     /* Ativa o layout em grade (Css grid) */
+      height: 100vh;  
+      /* vh ocupa a tela toda  igual o %*/
+      /* criar 4 colunas iguais(com 1fr, 1 fração de espaço disponivel) */
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+
+      /* definir 4 linhas com alturas prporcionais 
+      - 0,2 fr = linha pequena
+      -0,8fr = linha menor
+      -1,2fr =  uma linha média
+      -1,5fr = linha maior
+       */
+
+       grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+
+       grid-template-areas: 
+       "nav nav nav nav" /* na linha 1 nav ocupa todas 4 colunas*/
+       "Sidebar main main main" /*Linha 2 side ocupa 1 coluna, main nas outras 3 restantes*/
+       "Sidebar content1 content2 content3"
+       "Sidebar footer footer footer";                 /*Onde fica cada elemento/ordem*/
+
+       gap: o.2rem;            /* isso eu mudei tbm e mudou nada */
+       font-weight: 800;                            /* esse troço não sei oq faz Já q eu mudei o tamanho e mudou bolhufas*/
+       /* texte transform uppercase deixa a fonte grande  */
+       text-transform: uppercase;
+       font-size: 14px;                                /* Tamanho da letra*/
+       text-align: center;                             /*Essa alinha no centro ou qualquer lugar*/
+       font-family: Arial, Helvetica, sans-serif;        /* essa muda a fonte*/
+}
+
+nav{
+    background: #a7ffeb;  /*cor de fundo*/
+    border-radius: 5px;  /* Catos arredondados*/
+    padding-top: 5px; /* Espaço que fica em cima */
+    /*associa o elemento a nav do grid*/
+    grid-area: nav;
+    border: 1px solid black;
+
+}
+
+main{
+    background: #84ffff;
+    border-radius: 5px;  /* Catos arredondados*/
+    padding-top: 5px; /* Espaço que fica em cima */
+    grid-area: main;  /*grid area deve ser colocada em todas as colunas depois de ja ter colocado a ordem na grid area de cima */
+    border: 1px solid black;
+
+}
+
+#Sidebar{
+    background: #18ffff;
+    border-radius: 5px;  /* Cantos arredondados*/
+    padding-top: 5px; /* Espaço que fica em cima */
+    grid-area: Sidebar;
+    border: 1px solid black;  /* bordinha bonitinha😊*/
+
+
+}
+
+#content1{
+    background: #6fffd2;
+    border-radius: 5px;  /* Catos arredondados*/
+    padding-top: 5px; /* Espaço que fica em cima */
+    grid-area: content1;
+    border: 1px solid black;
+
+
+}
+
+#content2{
+background: #64ffba;
+    border-radius: 5px;  /* Catos arredondados*/
+    padding-top: 5px; /* Espaço que fica em cima */
+    grid-area: content2;
+    border: 1px solid black;
+
+
+}
+   #content3{
+    background: #73ffba;
+    border-radius: 5px;  /* Catos arredondados*/
+    padding-top: 5px; /* Espaço que fica em cima */
+    grid-area: content3;
+ 
+    border: 1px solid black;
+
+   }
+
+   footer{
+    background: #1de9b6;
+    border-radius: 5px;  /* Catos arredondados*/
+    padding-top: 5px; /* Espaço que fica em cima */
+    grid-area: footer;
+ 
+    border: 1px solid black;
+
+   }
+
+    /* se você selecionar um elemento que todos os lugares tem e  apertar control +d varias vezes depois dar control e setinha ate o final e depois dar enter você consegue adicionar todos de uma vez só  */
+
+   @media only screen and (max-width:550px){ /* @media serve para responsivo para quando dar os pixeis que você colocou ele mudar */
+
+    .Container{   /*Elemento pai */
+
+        grid-template-columns: 1fr;  /*Quantidade de colunas*/
+        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.0fr;   /* o tamanho q fica as colunas*/
+        /*OBS: mudar o tamanho aq não afeta o de cima e se você mexer encima pode alterar as cores e tals mas os tamanhos são decididos aq */
+
+        grid-template-areas:        /*onde na coluna os coisas deve ficar */
+        "nav"
+        "main"
+        "Sidebar"
+        "content1"
+        "content2"
+        "content3"
+        "footer"
+        
+        ;
+
+    }
+
+
+   }  
+   /* OBS:para isa do futuro, se der erro no código OLHA OS NOMESSSSSS dos class e id para você não errar grata😊  */

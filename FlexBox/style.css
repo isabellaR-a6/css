@@ -1,0 +1,26 @@
+#Principal{
+    background-color: rgb(213, 182, 243);
+    height: 500px;
+    display: flex; /*Posicionar os elementos onde eu quero*/
+
+    /*Direção dos itens do container(Principal aq nesse index)*/
+    flex-direction: column;  /*deixar em linha row significa linha - nde deixa as coisas */ 
+    /*quebra dos itens do principal/container*/
+    flex-wrap: nowrap;
+    /*Distribuição horizontal dos itens do principal/container*/
+    justify-content: flex-start;
+    /*Distribuição vertical dos itens do principal/container*/
+    align-items: center;
+
+}
+
+.item{
+    width: 200px;
+    height: 50px;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    margin: 5px;  /*O que ta fora do elemento ex:os quadrados com os números dentro- padding meche dentro do elemento ex: os números*/
+    padding: 10px;
+    
+     
+}
